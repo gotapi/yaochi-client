@@ -7,8 +7,10 @@ import de.shifen.yaochi.client.model.Operation;
 import de.shifen.yaochi.client.model.OperationItem;
 import de.shifen.yaochi.client.model.Operator;
 import de.shifen.yaochi.client.pojo.OperationType;
-import lombok.Getter;
-import lombok.Setter;
+import org.apache.http.auth.AuthScope;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.CredentialsProvider;
+import org.apache.http.impl.client.BasicCredentialsProvider;
 
 import javax.annotation.Resource;
 
@@ -46,6 +48,19 @@ public class LogEventTask implements Runnable{
         operationItem.setUuid(uuid);
         operationItem.setAppName(yaochiConfig.getBusinessAppName());
 
-        httpUtil.sendLog(new Gson().toJson(operationItem));
+        sendOpItem(operationItem, yaochiConfig, httpUtil);
+    }
+
+    static void sendOpItem(OperationItem operationItem, YaochiConfig yaochiConfig, HttpUtil httpUtil) {
+        if(yaochiConfig.getBasicAuthName().length()>0){
+            CredentialsProvider provider = new BasicCredentialsProvider();
+            UsernamePasswordCredentials credentials
+                    = new UsernamePasswordCredentials(yaochiConfig.getBasicAuthName(), yaochiConfig.getBasicAuthPass());
+            provider.setCredentials(AuthScope.ANY, credentials);
+            httpUtil.sendLog(new Gson().toJson(operationItem),provider);
+
+        }else {
+            httpUtil.sendLog(new Gson().toJson(operationItem));
+        }
     }
 }

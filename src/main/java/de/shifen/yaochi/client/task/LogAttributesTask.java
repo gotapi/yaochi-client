@@ -8,6 +8,10 @@ import com.google.gson.Gson;
 import de.shifen.yaochi.client.pojo.OperationType;
 import lombok.Getter;
 import lombok.Setter;
+import org.apache.http.auth.AuthScope;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.CredentialsProvider;
+import org.apache.http.impl.client.BasicCredentialsProvider;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -57,6 +61,6 @@ public class LogAttributesTask implements Runnable {
                 operationItem.addModified(amendent);
             }
         }
-        httpUtil.sendLog(new Gson().toJson(operationItem));
+        LogEventTask.sendOpItem(operationItem, yaochiConfig, httpUtil);
     }
 }

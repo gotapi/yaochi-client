@@ -16,4 +16,8 @@ public class YaochiConfig {
     private String serverAddress;
     @Value("${yaochi.autoLogAttributes}")
     private String autoLogAttributes;
+    @Value("${yaochi.basicAuth.name}")
+    private String basicAuthName;
+    @Value("${yaochi.basicAuth.pass}")
+    private String basicAuthPass;
 }

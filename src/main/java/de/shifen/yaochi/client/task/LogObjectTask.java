@@ -94,7 +94,7 @@ public class LogObjectTask implements Runnable {
                     }
                 }
             }
-            httpUtil.sendLog(new Gson().toJson(operationItem));
+            LogEventTask.sendOpItem(operationItem,yaochiConfig,httpUtil);
     }
 
     private AttributeModifiedInAmendent handleBuiltinTypeItem(FieldWrapper fieldWrapper) {
