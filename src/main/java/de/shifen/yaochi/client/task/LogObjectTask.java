@@ -18,7 +18,7 @@ import java.lang.reflect.Field;
 import java.util.List;
 
 /**
- * @author xurenlu
+ * @author ms404 <yaochi.github@404.ms>
  */
 public class LogObjectTask implements Runnable {
     private final Operation operation;

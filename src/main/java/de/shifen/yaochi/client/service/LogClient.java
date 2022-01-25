@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  *
- * @author xurenlu
+ * @author ms404 <yaochi.github@404.ms>
  */
 public class LogClient implements InitializingBean {
     private static final int DEFAULT_THREAD_KEEP_ALIVE_TIME = 360;

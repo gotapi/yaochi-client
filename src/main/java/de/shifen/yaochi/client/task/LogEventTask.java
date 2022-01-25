@@ -15,7 +15,7 @@ import org.apache.http.impl.client.BasicCredentialsProvider;
 import javax.annotation.Resource;
 
 /**
- * @author xurenlu
+ * @author ms404 <yaochi.github@404.ms>
  */
 public class LogEventTask implements Runnable{
 

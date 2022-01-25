@@ -18,7 +18,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @author xurenlu
+ * @author ms404 <yaochi.github@404.ms>
  */
 public class LogAttributesTask implements Runnable {
     @Resource

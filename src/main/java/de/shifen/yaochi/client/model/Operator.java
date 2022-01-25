@@ -5,15 +5,11 @@ import lombok.Data;
 import javax.persistence.*;
 
 /**
- * @author xurenlu
+ * @author ms404 <yaochi.github@404.ms>
  */
 @Data
-@Table
-@Entity
 public class Operator {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    long id;
+
     private String operatorId;
     private String operatorName;
     private String operatorAddonInformation;
@@ -23,7 +19,6 @@ public class Operator {
         this.operatorName = operatorName;
         this.operatorAddonInformation = operatorAddonInformation;
     }
-
     public Operator() {
     }
 }

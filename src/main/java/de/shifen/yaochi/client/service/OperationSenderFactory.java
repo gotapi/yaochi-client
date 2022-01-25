@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author xurenlu
+ * @author ms404 <yaochi.github@404.ms>
  */
 public class OperationSenderFactory {
     @Data

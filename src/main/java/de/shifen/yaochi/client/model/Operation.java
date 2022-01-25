@@ -1,43 +1,33 @@
 package de.shifen.yaochi.client.model;
 
-import lombok.*;
-import org.hibernate.Hibernate;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-import javax.persistence.*;
-import java.util.Objects;
+import javax.persistence.Column;
 
 /**
- * @author xurenlu
+ * @author ms404 <yaochi.github@404.ms>
  */
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
-@Table
-@Entity
+
 public class Operation {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
+
     String operationName;
     String operationEnglishAlias;
     String comment;
     @Column(name="detailJson",columnDefinition = "longtext")
     String detailJson;
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) {
-            return false;
-        }
-        Operation operation = (Operation) o;
-        return id != null && Objects.equals(id, operation.id);
+
+    public Operation(String operationName, String operationEnglishAlias, String comment, String detailJson) {
+        this.operationName = operationName;
+        this.operationEnglishAlias = operationEnglishAlias;
+        this.comment = comment;
+        this.detailJson = detailJson;
     }
 
-    @Override
-    public int hashCode() {
-        return getClass().hashCode();
+    public Operation() {
     }
 }

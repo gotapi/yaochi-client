@@ -5,7 +5,14 @@ import de.shifen.yaochi.client.richText.Html2Text;
 import de.shifen.yaochi.client.wrapper.FieldWrapper;
 import de.shifen.yaochi.client.richText.RichTextHandler;
 
+/**
+ * @author ms404 <yaochi.github@404.ms>
+ */
+
 public enum BuiltinTypeHandler {
+    /**
+     * 普通字段
+     */
     NORMAL {
         @Override
         public AttributeModifiedInAmendent handlerAttributeChange(FieldWrapper fieldWrapper) {
@@ -15,6 +22,9 @@ public enum BuiltinTypeHandler {
             return baseAttributeModel;
         }
     },
+    /**
+     * 富文本字段;
+     */
     RICHTEXT {
         @Override
         public AttributeModifiedInAmendent handlerAttributeChange(FieldWrapper fieldWrapper) {

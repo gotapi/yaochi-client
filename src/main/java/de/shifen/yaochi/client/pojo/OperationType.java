@@ -1,7 +1,7 @@
 package de.shifen.yaochi.client.pojo;
 
 /**
- * @author xurenlu
+ * @author ms404 <yaochi.github@404.ms>
  */
 
 public enum OperationType {

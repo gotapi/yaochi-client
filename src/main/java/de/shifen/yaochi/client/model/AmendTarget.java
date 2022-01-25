@@ -7,35 +7,18 @@ import javax.persistence.*;
 import java.util.Objects;
 
 /**
- * @author xurenlu
+ * @author ms404 <yaochi.github@404.ms>
  */
-@Getter
-@Setter
-@ToString
-@RequiredArgsConstructor
-@Table
-@Entity
+@Data
 public class AmendTarget {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
     String targetId;
     String targetName;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o){
-            return true;
-        }
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) {
-            return false;
-        }
-        AmendTarget that = (AmendTarget) o;
-        return id != null && Objects.equals(id, that.id);
+    public AmendTarget(String targetId, String targetName) {
+        this.targetId = targetId;
+        this.targetName = targetName;
     }
 
-    @Override
-    public int hashCode() {
-        return getClass().hashCode();
+    public AmendTarget() {
     }
 }
