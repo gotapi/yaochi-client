@@ -21,6 +21,7 @@ import java.util.List;
 @Entity
 public class OperationRow {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
 
     @Column(name = "app_name", columnDefinition = "varchar(32)")
