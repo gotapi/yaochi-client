@@ -65,7 +65,7 @@ public class LogObjectTask implements Runnable {
                 throw new RuntimeException("class of old-object must be equal to class of new-object");
             }
 
-            /**
+            /*
              *  issue #1
              */
             ClazzWrapper clazzWrapper = new ClazzWrapper(modelClazz);
