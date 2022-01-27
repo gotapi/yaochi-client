@@ -1,4 +1,4 @@
-package de.shifen.yaochi.client.richText;
+package de.shifen.yaochi.client.richtext;
 
 import com.google.gson.Gson;
 import difflib.Delta;
@@ -61,7 +61,7 @@ public class RichTextHandler {
             }
         }
 
-        Map<String, Object> textDiffMap = new HashMap<>();
+        Map<String, Object> textDiffMap = new HashMap<>(64);
         textDiffMap.put("version", "1.0.0");
         List<Fragment> diffFragmentList = new ArrayList<>();
 

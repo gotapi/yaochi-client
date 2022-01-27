@@ -136,7 +136,6 @@ public class LogObjectTask implements Runnable {
         return baseAttributeModel;
     }
 
-    // issue #2
     private boolean nullableEquals(Object a, Object b) {
         return (a == null && b == null) || (a != null && a.equals(b));
     }

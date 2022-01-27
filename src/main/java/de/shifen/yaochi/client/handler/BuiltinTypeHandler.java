@@ -1,9 +1,9 @@
 package de.shifen.yaochi.client.handler;
 
 import de.shifen.yaochi.client.model.AttributeModifiedInAmendent;
-import de.shifen.yaochi.client.richText.Html2Text;
+import de.shifen.yaochi.client.richtext.Html2Text;
 import de.shifen.yaochi.client.wrapper.FieldWrapper;
-import de.shifen.yaochi.client.richText.RichTextHandler;
+import de.shifen.yaochi.client.richtext.RichTextHandler;
 
 /**
  * @author ms404 <yaochi.github@404.ms>

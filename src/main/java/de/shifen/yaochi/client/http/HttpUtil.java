@@ -28,6 +28,7 @@ import java.util.List;
 @Slf4j
 public class HttpUtil {
 
+    static final  int HTTP_OK = 200;
     @Autowired(required = false)
     private YaochiConfig yaochiConfig;
 
@@ -74,7 +75,7 @@ public class HttpUtil {
             post.setHeader(new BasicHeader("Accept", "text/plain;charset=utf-8"));
             response = client.execute(post);
             int statusCode = response.getStatusLine().getStatusCode();
-            if (200 == statusCode) {
+            if (HTTP_OK == statusCode) {
                 return EntityUtils.toString(response.getEntity(), "UTF-8");
             }
         } catch (Exception e) {

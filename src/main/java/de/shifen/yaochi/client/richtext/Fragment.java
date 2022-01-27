@@ -1,4 +1,4 @@
-package de.shifen.yaochi.client.richText;
+package de.shifen.yaochi.client.richtext;
 
 import java.util.List;
 

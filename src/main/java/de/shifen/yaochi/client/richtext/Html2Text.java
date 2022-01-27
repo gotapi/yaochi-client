@@ -1,4 +1,4 @@
-package de.shifen.yaochi.client.richText;
+package de.shifen.yaochi.client.richtext;
 
 import javax.swing.text.MutableAttributeSet;
 import javax.swing.text.html.HTML;
@@ -9,6 +9,9 @@ import java.io.Reader;
 import java.io.StringReader;
 
 
+/**
+ * @author renlu
+ */
 public class Html2Text extends HTMLEditorKit.ParserCallback {
 
     private String lineBreak = "\n";
@@ -77,4 +80,4 @@ public class Html2Text extends HTMLEditorKit.ParserCallback {
         return stringBuilder.toString();
     }
 
-}  
+}

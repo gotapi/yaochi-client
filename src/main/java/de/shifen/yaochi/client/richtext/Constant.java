@@ -1,4 +1,4 @@
-package de.shifen.yaochi.client.richText;
+package de.shifen.yaochi.client.richtext;
 
 /**
  *  @author ms404 <yaochi.github@404.ms>

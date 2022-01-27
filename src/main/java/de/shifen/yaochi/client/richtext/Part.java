@@ -1,4 +1,4 @@
-package de.shifen.yaochi.client.richText;
+package de.shifen.yaochi.client.richtext;
 
 class Part {
     private PartType partType;
